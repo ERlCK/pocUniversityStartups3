@@ -8,12 +8,12 @@ AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY")
 AWS_SECRET_KEY = os.getenv("AWS_SECRET_KEY")
 
 
-KB_DOCS = st.secrets["KB_DOCS"]
-TABLE_NAME = st.secrets["TABLE_NAME"]
-AWS_ACCESS_KEY = st.secrets["AWS_ACCESS_KEY"]
-AWS_SECRET_KEY = st.secrets["AWS_SECRET_KEY"]
-BUCKET_NAME = st.secrets["BUCKET_NAME"]
-REGION_NAME = st.secrets["REGION_NAME"]
+st.write("KB_DOCS:", st.secrets["KB_DOCS"])
+st.write("TABLE_NAME:", st.secrets["TABLE_NAME"])
+st.write("AWS_ACCESS_KEY:", st.secrets["AWS_ACCESS_KEY"])
+st.write("AWS_SECRET_KEY:", st.secrets["AWS_SECRET_KEY"])
+st.write("BUCKET_NAME:", st.secrets["BUCKET_NAME"])
+st.write("REGION_NAME:", st.secrets["REGION_NAME"])
 
 
 BUCKET_NAME = "test-compass-us"
