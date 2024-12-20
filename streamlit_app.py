@@ -7,6 +7,15 @@ load_dotenv()
 AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY")
 AWS_SECRET_KEY = os.getenv("AWS_SECRET_KEY")
 
+
+KB_DOCS = st.secrets["KB_DOCS"]
+TABLE_NAME = st.secrets["TABLE_NAME"]
+AWS_ACCESS_KEY = st.secrets["AWS_ACCESS_KEY"]
+AWS_SECRET_KEY = st.secrets["AWS_SECRET_KEY"]
+BUCKET_NAME = st.secrets["BUCKET_NAME"]
+REGION_NAME = st.secrets["REGION_NAME"]
+
+
 BUCKET_NAME = "test-compass-us"
 REGION_NAME = "us-east-1"
 
