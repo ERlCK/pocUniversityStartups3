@@ -1,0 +1,201 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.logo-img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* BOX DO CHAT */
+.response-box {
+    margin-top: 20px;
+    border: 1px solid #8f2020;
+    border-radius: 5px;
+    overflow-y: auto;
+    height: calc(100vh - 200px);
+    padding-bottom: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/*Style do loader*/
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #bdbdbd;
+    border-bottom-color: #008006;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.question,
+.response {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: fit-content;
+    word-wrap: break-word;
+    /* Ensure long words break and don't overflow */
+}
+
+
+/* Balão de Mensagem do usuário */
+.question {
+    background-color: #f19b54;
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Balão de Mensagem da IA */
+.response {
+    background-color: #9cbff4;
+    align-self: flex-start;
+    text-align: left;
+    margin-right: auto;
+}
+
+.question:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    border-width: 10px 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #f19b54;
+}
+
+.response:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    border-width: 10px 10px 10px 0;
+    border-style: solid;
+    border-color: transparent #9cbff4 transparent transparent;
+}
+
+.btn-primary {
+    background-color: #3aa4c9;
+    border-color: #3aa4c9;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    background-color: #275b7c;
+    border-color: #275b7c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease-in-out;
+}
+
+.subtitulo {
+    font-style: italic;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px;
+    z-index: 1000;
+}
+
+/* Estilo padrão do botão "Nova Conversa" */
+.btn-new-conversation {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    border-radius: 50%;
+    color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+    top: 0px;
+    left: -10px;
+    /* Usar display flex e centrar o conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-new-conversation:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+/* Estilo do botão "Nova Conversa" quando habilitado */
+.btn-new-conversation:enabled {
+    background-color: #28a745; /* Cor de fundo quando habilitado */
+    border-color: #28a745; /* Cor da borda quando habilitado */
+    color: #fff; /* Cor do texto quando habilitado */
+}
+
+/* Estilo do botão "Nova Conversa" quando desabilitado */
+.btn-new-conversation:disabled {
+    background-color: #d6d8db;
+    /* Cor de fundo quando desabilitado */
+    border-color: #d6d8db;
+    /* Cor da borda quando desabilitado */
+    color: #6c757d;
+    /* Cor do texto quando desabilitado */
+}
+
+/* Estilo do botão "Nova Conversa" quando hover */
+.btn-new-conversation:enabled:hover {
+    background-color: #218838;
+    /* Cor de fundo quando hover */
+    border-color: #1e7e34;
+    /* Cor da borda quando hover */
+}
+
+/* Estilo do botão "Nova Conversa" quando focado */
+.btn-new-conversation:enabled:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .fixed-bottom {
+        width: 100%;
+    }
+}
