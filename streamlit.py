@@ -1,5 +1,11 @@
 import streamlit as st
 import boto3
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY")
+AWS_SECRET_KEY = os.getenv("AWS_SECRET_KEY")
 
 BUCKET_NAME = "test-compass-us"
 REGION_NAME = "us-east-1"
